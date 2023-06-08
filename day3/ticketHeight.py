@@ -1,7 +1,8 @@
-child_height = input(int("enter kid's height in cm"))
+child_height = int(input("enter the child's height in CM"))
 
 
-if child_height > 120:
-print ("You are eligible to ride")
-else
-print ("you are not eligible to ride")
+if child_height >= 120:
+ print ("You are eligible to ride")
+else:
+ print ("you are not eligible to ride")
+
