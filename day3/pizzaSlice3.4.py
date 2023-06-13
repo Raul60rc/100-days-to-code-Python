@@ -2,6 +2,7 @@ size = input("what size pizza do you want? S, M, or L")
 add_pepperoni = input("Do you want pepperoni? Y or N")
 extra_cheese = input("Do you want extra cheese? Y or N")
 price = 0
+extra = 0
 # small pizza : $15
 # medium pizza : $20
 # large pizza : $25
@@ -11,14 +12,23 @@ price = 0
 
 print("What pizza would you like?")
 if size == "S":
-    price = 15
+    price += 15
     print(f"the price is ${price}")
 elif size == "M":
-    price = 20
+    price += 20
     print(f"the price is ${price}")
 elif size == "L":
-    price = 25
+    price += 25
     print(f"the price is ${price}")
-    if add_pepperoni == "Y":
-        price = 2
-    print(f"it's going to be ${price}extra")
+
+if add_pepperoni == "Y":
+    if size == "S":
+        price += 2
+    else:
+        price += 3
+
+if extra_cheese == "Y":
+    price += 1
+
+    print(f"your final bill is ${price}")
+# Fix the code above after the pepperoni part & extra cheese
